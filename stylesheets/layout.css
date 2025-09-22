@@ -1,3 +1,85 @@
 body {
   background-color: #f8f8f8;
 }
+*{
+  box-sizing: border-box;
+}
+body {
+font-family: 'PT Sans', sans-serif;
+}
+h1, h2, h3, h4, p, ol, ul, blockquote, hr {
+  width: 700px;
+  margin: 0 auto;
+}
+h1, h2, h3, h4 {
+  font-family: 'PT Sans Caption', sans-serif;
+  font-weight: bold;
+}
+p, blockquote, ol, ul {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+img {
+  width: 1024px;
+  margin: 0 auto;
+  display: block;
+}
+h1 + hr + p {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 22px;
+}
+a {
+  color: inherit;
+}
+h1 {
+  margin: 50px auto;
+  font-size: 38px;
+  line-height: 44px;
+}
+h2 {
+  margin-top:40px;
+  font-size: 32px;
+  line-height: 36px;
+}
+h3 {
+  margin-top:36px;
+  font-size: 28px;
+  line-height: 32px;
+}
+h4 {
+  margin-top:32px;
+  font-size: 24px;
+  line-height: 28px;
+}
+hr {
+  width: 1024px;
+  margin: 20px auto;
+}
+h2 + hr + p, h3 + p, h4 + p {
+  margin-top: 10px;
+}
+ul {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+ol {
+  list-style-type: decimal;
+  padding-left: 30px;
+}
+li {
+  margin: 10px 0;
+}
+blockquote {
+  font-style: italic;
+  position: relative;
+}
+blockquote::before {
+  content: '';
+  width: 3px;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: -17px;
+}
