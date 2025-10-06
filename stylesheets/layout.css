@@ -1,21 +1,39 @@
+/* общие стили для страницы */
 body {
   background-color: #f8f8f8;
 }
-*{
+* {
   box-sizing: border-box;
 }
-body {
-font-family: 'PT Sans', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
-h1, h2, h3, h4, p, ol, ul, blockquote, hr {
+body {
+  font-family: "PT Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ol,
+ul,
+blockquote,
+hr {
   width: 700px;
   margin: 0 auto;
 }
-h1, h2, h3, h4 {
-  font-family: 'PT Sans Caption', sans-serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "PT Sans Caption", sans-serif;
   font-weight: bold;
 }
-p, blockquote, ol, ul {
+p,
+blockquote,
+ol,
+ul {
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 30px;
@@ -38,17 +56,17 @@ h1 {
   line-height: 44px;
 }
 h2 {
-  margin-top:40px;
+  margin-top: 40px;
   font-size: 32px;
   line-height: 36px;
 }
 h3 {
-  margin-top:36px;
+  margin-top: 36px;
   font-size: 28px;
   line-height: 32px;
 }
 h4 {
-  margin-top:32px;
+  margin-top: 32px;
   font-size: 24px;
   line-height: 28px;
 }
@@ -56,7 +74,9 @@ hr {
   width: 1024px;
   margin: 20px auto;
 }
-h2 + hr + p, h3 + p, h4 + p {
+h2 + hr + p,
+h3 + p,
+h4 + p {
   margin-top: 10px;
 }
 ul {
@@ -75,11 +95,133 @@ blockquote {
   position: relative;
 }
 blockquote::before {
-  content: '';
+  content: "";
   width: 3px;
   height: 100%;
   background-color: black;
   position: absolute;
   top: 0;
   left: -17px;
+}
+
+/* стили для бокового меню */
+.sidebar {
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 50px;
+  opacity: 0.4;
+  transition: all ease 0.3s;
+}
+.sidebar:hover {
+  opacity: 1;
+  transition: all ease 0.6s;
+}
+.sidebar ol {
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  font-size: 15px;
+}
+.sidebar ol ol {
+  color: rgba(0, 0, 0, 0.4);
+}
+.sidebar li {
+  margin: 0;
+  line-height: 100%;
+}
+.sidebar a {
+  text-decoration: none;
+}
+
+/* стили верхнего меню */
+.menubar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.menubar img {
+  width: 350px;
+  margin: 0;
+}
+.menubar a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+}
+.menubar a:hover {
+  color: black;
+  transition: all ease 0.6s;
+}
+
+/* стили для страницы html about */
+.about::before {
+  content: "";
+  width: 1440px;
+  height: 3120px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 720px);
+  background-image: url("../images/1440.png");
+  opacity: 0.2;
+}
+.about {
+  overflow-x: hidden;
+}
+.about section {
+  display: flex;
+  width: 1440px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.about section div {
+  width: 48%;
+}
+.about h2 {
+  font-weight: 400;
+  width: 100%;
+  font-size: 38px;
+  line-height: 46px;
+  margin: 0;
+}
+.about p {
+  width: 100%;
+  font-size: 26px;
+  line-height: 36px;
+  margin: 26px 0;
+}
+
+.about div:nth-of-type(2) img {
+  width: 1100px;
+}
+.about div:nth-of-type(1) img {
+  width: 700px;
+}
+#firstSection {
+  margin-top: 138px;
+}
+#firstSection div:nth-of-type(1) {
+  padding: 40px 0 0 168px;
+}
+#secondSection {
+  margin-top: 90px;
+}
+#secondSection div:nth-of-type(2) {
+  padding: 60px 60px 0 10px;
+}
+#thirdSection {
+  margin-top: 128px;
+}
+#thirdSection div:nth-of-type(1) {
+  padding: 20px 0 0 168px;
+}
+#thirdSection img {
+  border-left: 1px solid #eee;
+}
+#thirdSection {
+  border-bottom: 1px solid #eee;
 }
